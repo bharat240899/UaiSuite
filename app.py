@@ -5,6 +5,8 @@ import io
 import os
 import requests
 from urllib.request import urlopen
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -14,7 +16,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Add your Pexels API key here
-PEXELS_API_KEY = 'lX3nisojas7OmJKQtQb5RqtD1UyQ33CzEs9srk6kdBNBWOJ5rswlGCNX'
+PEXELS_API_KEY = os.getenv('PEXELS_API_KEY')
 PEXELS_API_URL = 'https://api.pexels.com/v1/search'
 
 @app.route('/api/backgrounds')
