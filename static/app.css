@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --canvas-border: #ccc;
+}
+
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --canvas-border: #ccc;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --card-bg: #2a2a2a;
+  --canvas-border: #555;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+canvas {
+  border: 1px solid var(--canvas-border);
+}
+
+select, input, button, .form-control, .form-select {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--canvas-border);
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.image-preview {
+    margin-top: 20px;
+    display: none;
+}
+#preview-img, #processed-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.btn-download {
+    margin-top: 10px;
+}
+.flex-box  {
+    display:flex;
+    column-gap: 9px;
+    flex-direction: column;
+    list-style: none;
+}
+nav li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+  #preview-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    canvas {
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .canvas-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .canvas-container h5 {
+      margin-top: 10px;
+    }
+    .gradient-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.75s step-end ;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Remover App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+
+<body data-original="{{ url_for('static', filename='reference-original.webp') }}"
+  data-transformed="{{ url_for('static', filename='transformed-image.png') }}">
+  {% include 'header.html' %}
+
+  <div class="form-check form-switch d-flex justify-content-center align-items-center my-3">
+    <input class="form-check-input" type="checkbox" id="modeToggle">
+    <label class="form-check-label ms-2" for="modeToggle">Dark Mode</label>
+  </div>
+
+  <h1 class="gradient-text text-center" id="typewriter"></h1>
+
+  <div class="container text-center mt-4">
+    <div id="preview-row" class="mt-4">
+      <div class="canvas-container">
+        <canvas id="originalCanvas"></canvas>
+        <h5>Original Image</h5>
+      </div>
+      <div class="canvas-container">
+        <canvas id="transformedCanvas"></canvas>
+        <h5>Transformed Image</h5>
+        <button id="downloadBtn" class="btn btn-info btn-center my-4">Download Image</button>
+      </div>
+    </div>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" id="imageInput" name="image" accept="image/*" required class="form-control mb-3" />
+      <button class="btn btn-primary rounded-pill px-4 py-2" type="submit">Remove Background</button>
+    </form>
+
+    <div class="mt-3">
+      <label for="filterSelect" class="form-label">Choose a Filter:</label>
+      <select id="filterSelect" class="form-select w-50 mx-auto">
+        <option value="none">None</option>
+        <option value="clarendon">Clarendon</option>
+        <option value="gingham">Gingham</option>
+        <option value="moon">Moon</option>
+        <option value="lark">Lark</option>
+        <option value="reyes">Reyes</option>
+        <option value="juno">Juno</option>
+        <option value="1977">1977</option>
+      </select>
+    </div>
+  </div>
+  <script type="module" src="/static/scripts/index.js"></script>
+</body>
+
+</html>
