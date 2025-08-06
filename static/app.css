@@ -13,7 +13,7 @@ body.light-mode {
 }
 
 body.dark-mode {
-  --bg-color: #1e1e1e;
+  --bg-color: #000000;
   --text-color: #f1f1f1;
   --card-bg: #2a2a2a;
   --canvas-border: #555;
