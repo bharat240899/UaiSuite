@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
   container.appendChild(categorySelect);
   container.appendChild(galleryContainer);
 });
-const text = "Unleash Creativity. Powered by AI. Designed for Tomorrow.";
+const text = "Hi XXX,Unleash Creativity. Powered by AI. Designed for Tomorrow.";
 const typewriter = document.getElementById('typewriter');
 
 let index = 0;
