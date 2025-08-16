@@ -17,6 +17,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Add your Pexels API key here
 PEXELS_API_KEY = os.getenv('PEXELS_API_KEY')
+if not PEXELS_API_KEY:
+    raise RuntimeError("PEXELS_API_KEY environment variable not set. Please set it in your .env file.")
 PEXELS_API_URL = 'https://api.pexels.com/v1/search'
 
 @app.route('/api/backgrounds')
