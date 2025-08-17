@@ -1,4 +1,3 @@
-// === DOM Elements ===
 const uploadForm = document.getElementById('uploadForm');
 const imageInput = document.getElementById('imageInput');
 const filterSelect = document.getElementById('filterSelect');
@@ -195,14 +194,14 @@ window.addEventListener('DOMContentLoaded', () => {
   container.appendChild(categorySelect);
   container.appendChild(galleryContainer);
 });
-const text = "Hi XXX,Unleash Creativity. Powered by AI. Designed for Tomorrow.";
+const text = "Unleash Creativity. Powered by AI. Designed for Tomorrow.";
 const typewriter = document.getElementById('typewriter');
 
 let index = 0;
 function type() {
   if (index <= text.length) {
     typewriter.textContent = text.slice(0, index++);
-    setTimeout(type, 50); // typing speed
+    setTimeout(type, 50); 
   }
 }
 window.addEventListener('DOMContentLoaded', type);
